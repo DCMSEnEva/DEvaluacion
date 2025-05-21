@@ -1,0 +1,674 @@
+:root {
+  /* Paleta Pastel con Acentos Vibrantes */
+  --primary-color-pastel: #B3E5FC; /* Azul Bebé Pastel */
+  --secondary-color-pastel: #FFC8DD; /* Rosa Pastel Suave */
+  
+  --accent-color-electric-blue: #007BFF; /* Azul Eléctrico */
+  --accent-color-shocking-pink: #FF007F; /* Rosa Shock */
+  --accent-color-lime-green: #AEEA00; /* Verde Lima */
+
+  --background-color: #FDFEFE; /* Blanco Muy Ligeramente Teñido */
+  --text-color: #212529; /* Gris Oscuro Casi Negro */
+  --card-background: #FFFFFF; /* Blanco Puro */
+  
+  --button-text-color: #FFFFFF; /* Texto blanco para botones con fondo vibrante */
+
+  --font-primary: 'Nunito', sans-serif;
+  --font-headings: 'Montserrat', sans-serif; /* Fuente más moderna para encabezados */
+  
+  --border-radius-main: 10px;
+  --border-radius-small: 6px;
+  --box-shadow-main: 0 3px 10px rgba(0,0,0,0.07);
+  --content-padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1rem, 5vw, 3rem);
+
+  /* RGB versions for rgba usage (approximations) */
+  --rgb-primary-color-pastel: 179, 229, 252;
+  --rgb-secondary-color-pastel: 255, 200, 221;
+  --rgb-accent-electric-blue: 0, 123, 255;
+  --rgb-accent-shocking-pink: 255, 0, 127;
+  --rgb-accent-lime-green: 174, 234, 0;
+}
+
+/* --- Reset y Base --- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+    font-size: 100%;
+}
+body {
+  font-family: var(--font-primary);
+  background: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.7;
+  font-size: 1rem;
+  overflow-x: hidden;
+}
+h1, h2, h3, h4 {
+    font-family: var(--font-headings);
+    font-weight: 700; /* Asegurar peso para Montserrat */
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+ul, ol {
+    padding-left: 20px;
+    margin-bottom: 1rem;
+}
+li {
+    margin-bottom: 0.5rem;
+}
+p {
+    margin-bottom: 1rem;
+}
+a {
+    color: var(--accent-color-electric-blue); /* Enlaces con azul eléctrico */
+    text-decoration: none;
+}
+a:hover, a:focus-visible {
+    text-decoration: underline;
+    color: var(--accent-color-shocking-pink); /* Hover con rosa shock */
+    outline: 2px solid var(--accent-color-lime-green); /* Outline con verde lima */
+    outline-offset: 2px;
+}
+
+/* --- Header y Navegación --- */
+header {
+  background: var(--primary-color-pastel); /* Fondo pastel para el header */
+  padding: 0.8rem 1rem;
+  text-align: center;
+  color: var(--text-color); /* Texto oscuro sobre fondo pastel */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+header .header-svg { /* Adaptar el SVG del logo */
+  height: 40px; 
+  width: 40px;
+}
+/* Definición del gradiente del logo en CSS para usar las nuevas variables */
+header .header-svg circle {
+    fill: url(#gradLogoEvaluacion);
+}
+/* El <defs> del SVG en HTML debe tener los <stop> con identificadores de color 
+   que luego no se sobreescriben fácilmente con CSS. 
+   Es mejor si el SVG es más simple o si el gradiente se aplica con CSS si es posible.
+   Por ahora, asumimos que el SVG tiene colores que se pueden cambiar o que el gradiente
+   del HTML usa los stop-color con las variables CSS (lo cual no es estándar).
+   Para el texto "EIE" dentro del SVG, asegurar que el fill sea contrastante.
+   Si el gradiente es var(--accent-color) y var(--primary-color), se usará la paleta definida en root.
+   Para este caso, el gradLogoEvaluacion usa accent y primary.
+   Ajustamos el stop-color en el HTML:
+   <stop offset="0%" stop-color="var(--accent-color-electric-blue)"/>
+   <stop offset="100%" stop-color="var(--primary-color-pastel)"/> 
+   Y el texto fill="white" si el fondo del círculo es oscuro, o var(--text-color) si es claro.
+*/
+header .brand-title {
+  font-family: var(--font-headings);
+  font-size: clamp(1.6rem, 4vw, 2rem); /* Ajustar tamaño */
+  margin: 0;
+  color: var(--text-color); /* Texto oscuro */
+}
+header .subtitle {
+  font-family: var(--font-primary);
+  font-size: clamp(0.9rem, 2vw, 1.05rem);
+  margin-top: 0.3rem;
+  opacity: 0.85;
+  color: var(--text-color);
+  font-weight: 400;
+}
+
+.menu-toggle {
+    display: none; 
+    background: none;
+    border: none;
+    color: var(--accent-color-electric-blue); /* Botón hamburguesa en azul eléctrico */
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: var(--border-radius-small);
+    transition: background-color 0.2s;
+}
+.menu-toggle:hover, .menu-toggle:focus-visible {
+    background-color: rgba(var(--rgb-accent-electric-blue), 0.1); /* Fondo sutil al pasar el mouse */
+    outline: none;
+}
+.main-nav ul {
+  display: flex;
+  list-style: none;
+}
+.main-nav li {
+  margin: 0 0.3rem;
+}
+.main-nav a {
+  text-decoration: none;
+  color: var(--accent-color-electric-blue); /* Enlaces de nav en azul eléctrico */
+  font-weight: bold;
+  padding: 0.6rem 0.8rem;
+  border-radius: var(--border-radius-small);
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
+  font-size: clamp(0.85rem, 1.8vw, 0.9rem);
+  display: inline-block;
+}
+.main-nav a:hover, .main-nav a:focus-visible, .main-nav a.active-link {
+  color: var(--button-text-color); /* Texto blanco */
+  background-color: var(--accent-color-shocking-pink); /* Fondo rosa shock para activo/hover */
+  transform: translateY(-2px);
+  outline: none;
+}
+
+/* --- Estructura Principal y Secciones --- */
+main {
+  max-width: 1100px;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+}
+section {
+  margin-bottom: 2.5rem;
+  background: var(--card-background); /* Fondo blanco para secciones */
+  border-radius: var(--border-radius-main);
+  box-shadow: var(--box-shadow-main);
+  overflow: hidden;
+}
+section h2 {
+  color: var(--accent-color-shocking-pink); /* Títulos de sección en rosa shock */
+  text-align: center;
+  font-size: clamp(2rem, 4.5vw, 2.3rem);
+  margin-bottom: 1.8rem;
+  padding-top: 1.5rem; /* Más padding para que no pegue al borde superior */
+}
+section .section-intro {
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  color: #555; /* Texto de introducción un poco más claro */
+  text-align: center;
+  max-width: 750px; 
+  margin: 0 auto 2.5rem auto;
+}
+
+/* Layout de dos columnas (para #inicio-evaluacion) */
+.two-column-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    align-items: center;
+}
+@media (min-width: 768px) {
+    .two-column-layout {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+}
+#inicio-evaluacion .text-content h4 {
+    color: var(--accent-color-electric-blue);
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+#inicio-evaluacion .text-content ul { list-style-type: '⭐'; padding-left: 1.8rem;}
+#inicio-evaluacion .text-content ul li { padding-left: 0.6rem; margin-bottom: 0.4rem; }
+
+.decorative-svg { /* El SVG de la sección de inicio */
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  margin: 1rem auto;
+}
+/* Para el SVG de inicio-evaluacion, el fill del rect usa un id 'gradFondoInicioEvaluacion'
+   que se define con linearGradient. Las variables CSS se pueden usar en los stop-color
+   si el CSS puede acceder a ellas en el contexto del SVG.
+   El texto dentro del SVG: fill="var(--text-color)"
+   La path (check): stroke="var(--accent-color-lime-green)"
+   El circle: fill="rgba(var(--rgb-accent-shocking-pink), 0.7)" (rosa con opacidad)
+*/
+.decorative-svg text { fill: var(--text-color); }
+.decorative-svg path { stroke: var(--accent-color-lime-green); }
+.decorative-svg circle { fill: rgba(var(--rgb-accent-shocking-pink), 0.7); }
+
+
+/* Concept Cards (para #conceptos-evaluacion) */
+.concept-columns {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+@media (min-width: 600px) {
+    .concept-columns {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.concept-card {
+    background-color: rgba(var(--rgb-primary-color-pastel), 0.2); /* Fondo azul pastel muy sutil */
+    border-left: 5px solid var(--accent-color-electric-blue); /* Borde azul eléctrico */
+    padding: 1.5rem;
+    border-radius: var(--border-radius-small);
+}
+.concept-card h3 {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    color: var(--accent-color-electric-blue); /* Título de concept card en azul eléctrico */
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+.concept-icon {
+    margin-right: 0.5rem;
+    font-size: 1.2em;
+    color: var(--accent-color-shocking-pink); /* Icono en rosa shock */
+}
+
+
+/* Tarjetas (para #tecnicas-observacion) */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajustar tamaño */
+  gap: 1.2rem;
+}
+.card {
+  background: var(--card-background);
+  padding: 1.5rem 1.2rem;
+  border-radius: var(--border-radius-main); /* Más redondeado */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #eee; 
+}
+.card:hover, .card:focus-visible {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 6px 15px rgba(var(--rgb-accent-electric-blue), 0.2); /* Sombra con color */
+  border-color: var(--accent-color-electric-blue);
+  outline: none;
+}
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+  color: var(--accent-color-electric-blue); /* Títulos de tarjeta */
+  font-size: 1.1rem;
+}
+.card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0;
+}
+
+/* Acordeones */
+.accordion-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem; 
+}
+.accordion-item {
+    border: 1px solid rgba(var(--rgb-primary-color-pastel), 0.5); /* Borde azul pastel */
+    border-radius: var(--border-radius-small);
+    overflow: hidden;
+}
+.accordion-header {
+  background-color: rgba(var(--rgb-secondary-color-pastel), 0.3); /* Fondo rosa pastel sutil */
+  color: var(--text-color); 
+  font-weight: bold;
+  cursor: pointer;
+  padding: 1rem 1.3rem;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1.05rem; 
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.accordion-header .sense-icon { /* Usamos sense-icon como clase genérica para iconos de acordeón */
+    margin-right: 0.8rem;
+    font-size: 1.2em;
+    color: var(--accent-color-shocking-pink); /* Icono en rosa */
+}
+.accordion-header::after { /* Icono +/- */
+    content: '+';
+    font-size: 1.4em;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    color: var(--accent-color-electric-blue); /* Icono +/- en azul */
+}
+.accordion-header.active::after {
+    content: '−';
+    transform: rotate(180deg);
+}
+.accordion-header:hover, .accordion-header:focus-visible {
+  background-color: rgba(var(--rgb-secondary-color-pastel), 0.5); /* Rosa pastel más intenso al pasar el mouse */
+}
+.accordion-header.active {
+  background-color: var(--secondary-color-pastel); /* Rosa pastel sólido cuando está activo */
+  color: var(--text-color); /* Asegurar contraste */
+}
+.accordion-header:focus-visible {
+    box-shadow: 0 0 0 2px var(--accent-color-electric-blue) inset;
+}
+.accordion-content {
+  padding: 0 1.5rem;
+  background-color: #fff;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+}
+.accordion-content ul, .accordion-content ol { margin-top: 0.5rem; }
+
+
+/* Tabs (para #la-entrevista e #instrumentos-evaluacion si se decide usar) */
+.tabs-container {
+    border: 1px solid rgba(var(--rgb-primary-color-pastel), 0.6);
+    border-radius: var(--border-radius-main);
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+.tab-buttons {
+    display: flex;
+    background-color: rgba(var(--rgb-primary-color-pastel), 0.2); /* Fondo azul pastel muy sutil */
+}
+.tab-button {
+    padding: 0.8rem 1.2rem;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: var(--accent-color-electric-blue); /* Texto de tabs en azul */
+    flex-grow: 1;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+    border-right: 1px solid rgba(var(--rgb-primary-color-pastel), 0.4);
+}
+.tab-button:last-child {
+    border-right: none;
+}
+.tab-button:hover, .tab-button:focus-visible {
+    background-color: rgba(var(--rgb-primary-color-pastel), 0.4);
+}
+.tab-button.active {
+    background-color: var(--accent-color-electric-blue); /* Fondo azul eléctrico para tab activo */
+    color: var(--button-text-color); /* Texto blanco */
+}
+.tab-button:focus-visible {
+    outline: 2px solid var(--accent-color-lime-green);
+    outline-offset: -2px; /* Hacia adentro */
+}
+.tab-content-area {
+    padding: 1.5rem;
+    background-color: white;
+}
+.evolution-content { /* Reutilizamos esta clase para el contenido de los tabs */
+    animation: fadeInAnimation 0.5s ease-in-out;
+}
+.evolution-content h4 {
+    color: var(--accent-color-shocking-pink); /* Títulos dentro de tabs en rosa */
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+}
+.evolution-content ul li { margin-bottom: 0.3em; }
+.evolution-content p a.external-link { /* Para el enlace del video de entrevista */
+    color: var(--accent-color-electric-blue);
+    font-weight: bold;
+}
+.evolution-content p a.external-link:hover {
+    color: var(--accent-color-shocking-pink);
+}
+
+
+/* Botones de Acción */
+.action-button { 
+  background-color: var(--accent-color-electric-blue); /* Botones principales en azul eléctrico */
+  color: var(--button-text-color); /* Texto blanco */
+  padding: 0.9rem 1.8rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+  display: inline-block; 
+  text-align: center;
+  margin-top: 1.5rem; /* Más margen */
+  text-decoration: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.action-button:hover, .action-button:focus-visible {
+  background-color: var(--accent-color-shocking-pink); /* Hover a rosa shock */
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  outline: none;
+}
+.action-button-inline { /* Botones más pequeños, dentro de contenido */
+    background-color: var(--accent-color-lime-green); /* Verde lima para botones inline */
+    color: var(--text-color); /* Texto oscuro para contraste con verde lima */
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold; /* Hacerlos bold también */
+    transition: background-color 0.3s, transform 0.2s, color 0.3s;
+    font-size: 0.9rem;
+    margin-top: 0.8rem; /* Más margen */
+    text-decoration: none;
+}
+.action-button-inline:hover, .action-button-inline:focus-visible {
+    background-color: var(--accent-color-electric-blue); /* Hover a azul eléctrico */
+    color: var(--button-text-color); /* Texto blanco */
+    transform: scale(1.05);
+    outline: none;
+}
+
+/* Footer */
+footer {
+  background: var(--primary-color-pastel); /* Mismo color que el header */
+  color: var(--text-color); /* Texto oscuro */
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-top: 3rem;
+}
+footer p { margin-bottom: 0; }
+footer .footer-svg path {
+    stroke: rgba(var(--rgb-accent-electric-blue), 0.6); /* Ondas en azul eléctrico semi-transparente */
+}
+
+/* --- Modales --- */
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1050;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto; 
+  background-color: rgba(var(--rgb-primary-color-pastel), 0.3); /* Fondo azul pastel muy transparente con blur */
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+.modal.is-visible {
+    opacity: 1;
+}
+.modal-content {
+  background-color: var(--card-background); /* Fondo blanco */
+  margin: 8vh auto;
+  padding: clamp(1.8rem, 4vw, 2.2rem); /* Ajustar padding */
+  width: 90%;
+  max-width: 700px; /* Un poco más ancho para contenido denso */
+  border-radius: var(--border-radius-main);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  position: relative;
+  transform: translateY(-20px) scale(0.98);
+  opacity: 0;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.3s ease-out;
+}
+.modal.is-visible .modal-content {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+.modal-content.large {
+    max-width: 900px; 
+}
+.close-button {
+  color: #888;
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  font-size: 2.2rem; 
+  font-weight: bold;
+  line-height: 1;
+  padding: 0.1rem 0.6rem;
+  background: transparent;
+  border: none;
+  transition: color 0.2s ease, transform 0.2s ease, background-color 0.2s;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.close-button:hover, .close-button:focus-visible {
+  color: var(--button-text-color); /* Texto blanco */
+  background-color: var(--accent-color-shocking-pink); /* Fondo rosa */
+  transform: rotate(90deg) scale(1.1);
+  outline: none;
+}
+.modal-content h3 { /* Título dentro del modal */
+  font-family: var(--font-headings);
+  color: var(--accent-color-shocking-pink); /* Títulos de modal en rosa shock */
+  margin-top: 0;
+  font-size: clamp(1.6rem, 3.5vw, 1.9rem); /* Ajustar tamaño */
+  margin-bottom: 1.5rem;
+}
+.modal-content ul { list-style-type: '❖'; padding-left: 1.5rem; } /* Icono diferente para listas en modales */
+.modal-content ul li { padding-left: 0.6rem; margin-bottom: 0.7rem; }
+.modal-content h4 {
+    color: var(--accent-color-electric-blue); /* Subtítulos en modales en azul eléctrico */
+    margin-top: 1.5rem;
+    margin-bottom: 0.6rem;
+    border-bottom: 2px solid var(--accent-color-lime-green); /* Borde inferior en verde lima */
+    padding-bottom: 0.4rem;
+    font-size: 1.15rem;
+}
+.modal-content h4:first-of-type {
+    margin-top: 0;
+}
+
+/* --- Animaciones y Utilidades (Sin cambios, son genéricas) --- */
+.fade-in { animation: fadeInAnimation 0.9s ease-in-out; }
+.slide-up { animation: slideUpAnimation 0.9s ease-in-out; }
+@keyframes fadeInAnimation { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUpAnimation { from { transform: translateY(25px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+/* --- Media Queries (Mobile-First) --- */
+@media (max-width: 767px) {
+    .menu-toggle {
+        display: block;
+    }
+    .main-nav {
+        display: none; 
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        right: 0;
+        background-color: var(--primary-color-pastel); /* Fondo pastel para menú desplegable */
+        box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+        padding: 0.5rem 0;
+        border-top: 1px solid rgba(var(--rgb-accent-electric-blue), 0.3); /* Borde superior azul */
+        max-height: calc(100vh - 60px);
+        overflow-y: auto;
+    }
+    .main-nav.is-active {
+        display: block;
+        animation: slideDownNav 0.35s ease-out;
+    }
+    @keyframes slideDownNav {
+        from { opacity: 0; transform: translateY(-15px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .main-nav ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .main-nav li {
+        margin: 0;
+        width: 100%;
+    }
+    .main-nav a {
+        display: block;
+        padding: 1rem 1.5rem;
+        text-align: left;
+        border-bottom: 1px solid rgba(var(--rgb-accent-electric-blue), 0.2); /* Separador azul sutil */
+        width: 100%;
+        border-radius: 0;
+        font-size: 1rem;
+        color: var(--accent-color-electric-blue); /* Color base para enlaces en desplegable */
+    }
+    .main-nav li:last-child a {
+        border-bottom: none;
+    }
+    .main-nav a:hover, .main-nav a:focus-visible, .main-nav a.active-link {
+        background-color: var(--accent-color-shocking-pink); /* Fondo rosa shock */
+        color: var(--button-text-color); /* Texto blanco */
+        transform: none;
+    }
+
+    .tab-buttons {
+        flex-direction: column;
+    }
+    .tab-button {
+        border-right: none;
+        border-bottom: 1px solid rgba(var(--rgb-primary-color-pastel), 0.4);
+    }
+    .tab-button:last-child {
+        border-bottom: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .main-nav {
+        display: flex !important;
+        position: static;
+        background-color: transparent;
+        box-shadow: none;
+        padding: 0;
+        border-top: none;
+        max-height: none;
+        overflow-y: visible;
+    }
+    .main-nav ul {
+        flex-direction: row;
+    }
+    .main-nav li {
+        width: auto;
+    }
+    .main-nav a {
+        display: inline-block;
+        padding: 0.6rem 0.8rem;
+        text-align: center;
+        border-bottom: none;
+        border-radius: var(--border-radius-small);
+        font-size: clamp(0.85rem, 1.8vw, 0.9rem); /* Restaurar tamaño de fuente */
+        color: var(--accent-color-electric-blue); /* Restaurar color base de desktop */
+    }
+    .main-nav a:hover, .main-nav a:focus-visible, .main-nav a.active-link {
+        color: var(--button-text-color);
+        background-color: var(--accent-color-shocking-pink);
+        transform: translateY(-2px);
+    }
+}

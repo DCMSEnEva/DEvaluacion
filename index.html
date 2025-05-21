@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Evaluación en Educación Infantil: Guía Completa (LOMLOE)</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- <link rel="icon" href="assets/favicon_evaluacion.ico" type="image/x-icon"> -->
+</head>
+<body>
+  <header>
+    <div class="header-container">
+        <div class="logo-area">
+            <svg class="header-svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" aria-label="Logotipo de Guía de Evaluación EI">
+                <circle cx="25" cy="25" r="23" fill="url(#gradLogoEvaluacion)"/>
+                <defs>
+                    <radialGradient id="gradLogoEvaluacion" cx="0.5" cy="0.5" r="0.7">
+                        <stop offset="0%" stop-color="var(--accent-color-electric-blue, #007BFF)"/>
+                        <stop offset="100%" stop-color="var(--primary-color-pastel, #B3E5FC)"/>
+                    </radialGradient>
+                </defs>
+                <text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="18" fill="var(--button-text-color, white)">EIE</text>
+            </svg>
+            <h1 class="brand-title">Guía de Evaluación en EI</h1>
+        </div>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="main-nav-list">
+            <i class="fas fa-bars" aria-hidden="true"></i>
+            <span class="sr-only">Menú</span>
+        </button>
+        <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
+          <ul id="main-nav-list">
+            <li><a href="#inicio-evaluacion">Inicio</a></li>
+            <li><a href="#conceptos-evaluacion">Conceptos</a></li>
+            <li><a href="#momentos-evaluacion">Momentos</a></li>
+            <li><a href="#tecnicas-observacion">Observación</a></li>
+            <li><a href="#la-entrevista">Entrevista</a></li>
+            <li><a href="#instrumentos-evaluacion">Instrumentos</a></li>
+            <li><a href="#indicadores-criterios">Indicadores y Criterios</a></li>
+            <li><a href="#evaluacion-practica">Práctica Docente</a></li>
+            <li><a href="#informes-evaluacion">Informes</a></li>
+            <li><a href="#conclusion-evaluacion">Conclusión</a></li>
+          </ul>
+        </nav>
+    </div>
+    <p class="subtitle">Herramientas y Estrategias bajo el marco LOMLOE para una Intervención Educativa Efectiva</p>
+  </header>
+
+  <main>
+    <!-- SECCIÓN INICIO -->
+    <section id="inicio-evaluacion" class="fade-in content-padding">
+      <h2>La Evaluación en Educación Infantil: Guía Completa y Simplificada</h2>
+      <div class="section-content two-column-layout">
+        <div class="text-content">
+          <p>Hola estudiante, entendiendo que este tema puede parecer complejo, vamos a desglosarlo de manera sencilla para que puedas entenderlo perfectamente. La evaluación en educación infantil es fundamental para asegurar que los niños están desarrollándose adecuadamente y para ajustar nuestra intervención educativa según sus necesidades, especialmente en el contexto de la actual ley educativa LOMLOE.</p>
+          <p>Sara, como muchos educadores, está finalizando sus prácticas y busca recopilar información sobre cómo evaluar, qué evaluar y cuándo, para desarrollar las diferentes técnicas e instrumentos en esta etapa. Esta guía te ayudará a recopilar la información necesaria para ajustar la intervención y transmitirla a otros agentes educativos y familias.</p>
+          <h4>¿Qué es la evaluación en educación infantil y para qué sirve? (Según OCR pp. 1)</h4>
+          <p>La evaluación en educación infantil tiene como finalidad principal <strong>ajustar la acción educativa a las necesidades de cada niño y niña</strong>. No se trata de poner notas o calificar, sino de:</p>
+          <ul>
+            <li>Conocer el desarrollo de cada niño.</li>
+            <li>Adaptar nuestras actividades a sus necesidades.</li>
+            <li>Compartir información con las familias y otros profesionales.</li>
+            <li>Mejorar nuestra propia práctica docente.</li>
+          </ul>
+          <p>Es importante entender que <strong>nunca debe usarse para procesos de selección</strong> en esta etapa educativa. La evaluación debe ser un proceso continuo y global, con una actitud dispuesta a modificar la respuesta educativa.</p>
+          <button class="action-button modal-trigger" data-modal-target="modal-finalidad-evaluacion">Profundizar en la Finalidad</button>
+        </div>
+        <div class="image-content">
+          <svg viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg" class="decorative-svg anim-svg-float" aria-labelledby="svgInicioTitleEval">
+            <title id="svgInicioTitleEval">Ilustración sobre evaluación educativa</title>
+            <rect x="30" y="40" width="140" height="100" rx="10" ry="10" class="svg-rect-background"/>
+            <path d="M60 70 l20 20 l40 -40" class="svg-check-mark" stroke-width="8" fill="none" stroke-linecap="round"/>
+            <circle cx="140" cy="110" r="18" class="svg-accent-circle"/>
+            <text x="50%" y="25" dominant-baseline="middle" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="16" class="svg-title-text">Evaluar para Avanzar</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN CONCEPTOS CLAVE DE EVALUACIÓN -->
+    <section id="conceptos-evaluacion" class="slide-up content-padding">
+      <h2>Conceptos Fundamentales de la Evaluación</h2>
+      <p class="section-intro">La evaluación es un pilar de la intervención educativa, orientada a la mejora y al acompañamiento individualizado del alumnado.</p>
+        <p>Posiblemente recordarás que la finalidad de la evaluación en esta etapa es ajustar la acción educativa a las necesidades de cada niño y niña. Naturalmente, esto conlleva una actitud en el personal técnico de estar dispuesto a modificar la respuesta educativa en función de los resultados de la evaluación. Otra finalidad importante es compartir la información sobre el niño o la niña con otros agentes educativos, sobre todo con la familia y con el profesorado de cursos posteriores. En parte, y en última instancia, con ello se persigue lo mismo: que otros tengan la información para que puedan también proporcionar una respuesta adecuada.</p>
+       <button class="action-button modal-trigger" data-modal-target="modal-actitud-evaluador">La Actitud del Educador frente a la Evaluación</button>
+    </section>
+
+    <!-- SECCIÓN MOMENTOS DE LA EVALUACIÓN -->
+    <section id="momentos-evaluacion" class="fade-in content-padding">
+      <h2>Momentos Clave de la Evaluación (Según OCR pp. 1-2)</h2>
+      <p class="section-intro">La evaluación en la educación infantil deberá abarcar diferentes momentos de la intervención. Así, realizaremos una:</p>
+      <div class="accordion-container">
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false" aria-controls="content-eval-inicial"><span class="sense-icon">🚀</span>Evaluación Inicial</button>
+          <div class="accordion-content" id="content-eval-inicial" aria-hidden="true"><p>De las ideas y capacidades previas. El inicio de cualquier proceso de intervención exige el conocimiento de experiencias y capacidades previas del alumnado con el fin de producir aprendizajes significativos y funcionales. Éstos sólo serán posibles si quien aprende construye sobre sus conocimientos y capacidades anteriores el nuevo conjunto de ideas que se dispone a asimilar (Cubero, 1989).</p></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false" aria-controls="content-eval-continua"><span class="sense-icon">🔄</span>Evaluación Continua</button>
+          <div class="accordion-content" id="content-eval-continua" aria-hidden="true"><p>Consiste en determinar el grado de desarrollo de las capacidades. Para llevar esto a cabo será necesario diseñar objetivos didácticos y actividades de evaluación donde el personal técnico planifica con mayor precisión la información que pretende recoger, los instrumentos y recursos a utilizar, y el análisis y toma de decisiones posteriores respecto al proceso evaluativo.</p></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header" aria-expanded="false" aria-controls="content-eval-final"><span class="sense-icon">🏁</span>Evaluación Final</button>
+          <div class="accordion-content" id="content-eval-final" aria-hidden="true"><p>Determinará el grado de asimilación de los contenidos y capacidades que se pretendía alcanzar. Se trata de valorar el grado de consecución obtenido por cada alumno y alumna respecto a los objetivos propuestos en el proceso educativo, y que será el punto de partida de los nuevos aprendizajes que se ofrecen. El grado de asimilación de los contenidos nos permitirá apreciar el grado de desarrollo de las capacidades.</p></div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="content-eval-planificacion"><span class="sense-icon">📋</span>Evaluación de la Planificación y Materiales</button>
+            <div class="accordion-content" id="content-eval-planificacion" aria-hidden="true"><p>Del mismo modo, también necesitaremos evaluar los documentos de planificación del centro y los materiales curriculares, que son todos aquellos libros y materiales que sirven de apoyo a los procesos de aprendizaje del alumnado.</p></div>
+        </div>
+      </div>
+      <button class="action-button modal-trigger" data-modal-target="modal-detalle-momentos">Profundizar en los Momentos de Evaluación</button>
+    </section>
+
+    <!-- SECCIÓN TÉCNICAS DE OBSERVACIÓN -->
+    <section id="tecnicas-observacion" class="slide-up content-padding">
+      <h2>La Observación: Técnica Fundamental (Según OCR pp. 2-4)</h2>
+      <p class="section-intro">La observación es el método básico para la recogida de información en educación. Se pueden distinguir tipos según: el contenido, el agente, la situación y el momento. Los procedimientos de observación más utilizados son los registros narrativos, las listas de control y las escalas de estimación (Anaya, 2002).</p>
+      <div class="cards">
+        <div class="card modal-trigger" data-modal-target="modal-registros-narrativos" data-observation-key="narrativos" tabindex="0">
+            <h3>Registros Narrativos</h3><p>Descripciones escritas u orales (grabadas) de acontecimientos observados, sin estructuración previa. Útiles en fases iniciales o para conductas de baja frecuencia. Distinguimos anecdóticos (sucesos inesperados) y continuos (comportamiento a medida que ocurre).</p>
+        </div>
+        <div class="card modal-trigger" data-modal-target="modal-listas-control" data-observation-key="listas" tabindex="0">
+            <h3>Listas de Control</h3><p>Listado de conductas de interés sobre las que se indica (generalmente al final) si han tenido o no lugar durante el periodo de observación.</p>
+        </div>
+        <div class="card modal-trigger" data-modal-target="modal-escalas-estimacion" data-observation-key="escalas" tabindex="0">
+            <h3>Escalas de Estimación</h3><p>Listado de conductas de interés donde se cuantifica el grado en que han tenido lugar durante la observación, en relación con alguna dimensión o característica.</p>
+        </div>
+      </div>
+      <button class="action-button modal-trigger" data-modal-target="modal-aspectos-observacion">Aspectos Clave de la Observación</button>
+    </section>
+
+    <!-- SECCIÓN LA ENTREVISTA -->
+    <section id="la-entrevista" class="fade-in content-padding">
+        <h2>La Entrevista como Herramienta de Evaluación (Según OCR pp. 4-6)</h2>
+        <p class="section-intro">La entrevista es un procedimiento valioso para la recogida de información, con ventajas y limitaciones. Su estructuración determina cómo se desarrolla la interacción.</p>
+        <div class="tabs-container">
+            <div class="tab-buttons" role="tablist" aria-label="Aspectos de la entrevista educativa">
+              <button class="tab-button active" role="tab" aria-selected="true" aria-controls="entrevista-ventajas" id="tab-ventajas">Ventajas</button>
+              <button class="tab-button" role="tab" aria-selected="false" aria-controls="entrevista-limitaciones" id="tab-limitaciones">Inconvenientes</button>
+              <button class="tab-button" role="tab" aria-selected="false" aria-controls="entrevista-tipos" id="tab-tipos">Tipos</button>
+            </div>
+            <div class="tab-content-area">
+              <div class="evolution-content active" id="entrevista-ventajas" role="tabpanel" aria-labelledby="tab-ventajas">
+                <h4>Ventajas de la Entrevista (Edelbrock y Costello, 1988):</h4>
+                <ul>
+                    <li>Recoge información muy diversa (actual, pasada, creencias, emociones).</li>
+                    <li>Permite la motivación del entrevistado.</li>
+                    <li>Gran flexibilidad (enfocar, volver, aclarar).</li>
+                    <li>Contrasta información verbal y no verbal.</li>
+                    <li>A veces, único medio viable (ej. analfabetismo).</li>
+                </ul>
+              </div>
+              <div class="evolution-content" id="entrevista-limitaciones" role="tabpanel" aria-labelledby="tab-limitaciones" hidden>
+                <h4>Inconvenientes de la Entrevista:</h4>
+                <ul>
+                    <li>Dificultad para establecer sus niveles de calidad.</li>
+                    <li>Precisa una cantidad de tiempo considerable (preparación, duración, elaboración).</li>
+                    <li>Puede suponer desplazamientos, permisos laborales para los entrevistados.</li>
+                </ul>
+              </div>
+              <div class="evolution-content" id="entrevista-tipos" role="tabpanel" aria-labelledby="tab-tipos" hidden>
+                <h4>Tipos de Entrevistas según Estructuración (Anaya, 2002):</h4>
+                <ul>
+                    <li><strong>No estructuradas:</strong> Pocas exigencias preestablecidas, guiadas por propósitos, requieren gran habilidad.</li>
+                    <li><strong>Semiestructuradas:</strong> Guion previo, pero flexible en formulación, orden y registro.</li>
+                    <li><strong>Estructuradas:</strong> Diseño cerrado (información, cómo obtenerla y registrarla), instrucciones precisas.</li>
+                    <li><strong>Altamente estructuradas:</strong> Cuestionario oral, mínimas habilidades entrevistadoras. Adecuadas para recoger info sobre cuadros comportamentales definidos.</li>
+                </ul>
+              </div>
+            </div>
+        </div>
+        <button class="action-button modal-trigger" data-modal-target="modal-conducir-entrevista">Claves para una Entrevista Efectiva</button>
+    </section>
+
+    <!-- SECCIÓN INSTRUMENTOS ESTANDARIZADOS -->
+    <section id="instrumentos-evaluacion" class="slide-up content-padding">
+        <h2>Instrumentos Estandarizados y Pruebas Específicas (Según OCR pp. 6-11)</h2>
+        <p class="section-intro">Se entiende por instrumento estandarizado todo procedimiento de recogida de información con diseño altamente estructurado (conductas, condiciones, registro, calificación e interpretación definidos) para que la información sea comparable. Se encuentran en tests cognitivos, pruebas de rendimiento, cuestionarios, entrevistas estructuradas, etc. Suelen contar con manuales detallados.</p>
+        <div class="accordion-container">
+            <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false" aria-controls="content-instr-sensoriomotor"><span class="sense-icon">👁️👂</span>Evaluación del Desarrollo Sensoriomotor</button>
+                <div class="accordion-content" id="content-instr-sensoriomotor" aria-hidden="true">
+                    <p><strong>Percepción Visual y Visomotora:</strong></p>
+                    <ul>
+                        <li>Test del Desarrollo de la Integración Visomotora (VMI): 24 diseños geométricos a copiar (aplic. 2-19 años, uso rec. 4-13 años).</li>
+                        <li>Test de Habilidades Viso-Perceptivas (no motor) Revisado (TVPS-R): 7 áreas (Discriminación Visual, Memoria Visual, Figura-Fondo, Cierre visual, etc.) (4-13 años).</li>
+                        <li>Test de Desarrollo de la Percepción Visual de Frostig: 8 subtests (Coordinación visomanual, Posiciones en el espacio, Copia, Figura-Fondo, Relaciones espaciales, Cierre visual, Velocidad visomotora, Constancia de la forma) (4-10 años).</li>
+                    </ul>
+                    <p><strong>Percepción Auditiva:</strong></p>
+                    <ul>
+                        <li>Prueba de Discriminación Auditiva (Wepman): 40 pares de palabras (iguales/diferentes) (5-9 años).</li>
+                        <li>Prueba de Discriminación Auditiva Goldman-Fristoe-Woodcock: Discriminación en silencio y con ruido ambiental.</li>
+                        <li>Prueba de Conceptuación Auditiva de Lindamood (LAC Test): Discriminar sonidos del habla y percibir número/orden en patrones.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false" aria-controls="content-instr-cognitivo"><span class="sense-icon">🧠</span>Evaluación del Desarrollo Cognitivo</button>
+                <div class="accordion-content" id="content-instr-cognitivo" aria-hidden="true">
+                    <ul>
+                        <li>Escala para la Exploración de las Etapas de la Inteligencia Sensoriomotriz (Uzgiris-Hunt): Nivel de desarrollo psicomotor (0-2 años). 4 subpruebas (búsqueda objeto desaparecido, utilización de intermediarios, exploración de objetos, combinación de objetos).</li>
+                        <li>Escalas Ordinales de Desarrollo Psicológico (Piaget): Desarrollo intelectual en período sensoriomotor. 8 escalas (Permanencia del Objeto, Uso de objetos como medios, Aprendizaje y anticipación, Desarrollo de esquemas, Comprensión de causalidad, Imitación vocal, Imitación gesticular).</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false" aria-controls="content-instr-psicomotriz"><span class="sense-icon">🤸</span>Evaluación del Desarrollo Psicomotriz</button>
+                <div class="accordion-content" id="content-instr-psicomotriz" aria-hidden="true">
+                    <ul>
+                        <li>Escala de desarrollo psicomotor de la primera infancia (Brunet-Lézine): Evalúa control postural, motricidad, coordinación óculo-motriz, conducta de adaptación a objetos (0-6 años). Compuesta por escala de observación (1-30m) y pruebas complementarias (24m-5a y 3-6a).</li>
+                        <li>Escalas McCarthy de Aptitudes y Psicomotricidad (MSCA): 18 ítems en 6 escalas (verbal, numérica, general cognitiva, perceptivo-manipulativa, memoria, motricidad) (2.5 - 8.5 años).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <button class="action-button modal-trigger" data-modal-target="modal-uso-instrumentos">Consideraciones sobre Instrumentos Estandarizados</button>
+    </section>
+
+    <!-- SECCIÓN INDICADORES Y CRITERIOS -->
+    <section id="indicadores-criterios" class="fade-in content-padding">
+        <h2>Indicadores, Referencias y Criterios de Evaluación (Según OCR pp. 11-13 / Actualizado LOMLOE)</h2>
+        <p class="section-intro">Definir qué vamos a observar y cómo vamos a valorar los avances es crucial para una evaluación significativa y alineada con el marco normativo actual.</p>
+        <div class="accordion-container">
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false" aria-controls="content-indicadores-eval"><span class="sense-icon">🎯</span>Los Indicadores de Evaluación</button>
+              <div class="accordion-content" id="content-indicadores-eval" aria-hidden="true">
+                <p>La conducta de los niños es compleja, por lo que es imprescindible ser selectivos al elegir indicadores (Palacios y Paniagua, 2005) porque las condiciones del aula no permiten un listado minucioso y no se necesita una evaluación exhaustiva para tomar decisiones educativas.</p>
+                <p>Recomendaciones para los indicadores:</p>
+                <ul>
+                    <li><strong>Ser selectivos:</strong> Centrarse en lo importante según el planteamiento educativo (ej. más en plástica y musical si se prima, o en psicomotor).</li>
+                    <li><strong>Adecuado nivel de concreción:</strong> Evitar que un indicador demasiado concreto infravalore (ej. si se pide "conoce rojo, azul, verde" y el niño conoce "rojo, negro, amarillo").</li>
+                    <li><strong>Adaptar a la diversidad:</strong> Ajustar cuando hay grandes desniveles en el grupo (edades, NEE). No sería adecuado evaluar con indicadores que le vienen grandes o pequeños.</li>
+                </ul>
+                <p><em>Ejemplo de indicadores para juego simbólico (3-4 años) (Palacios y Paniagua, 2005):</em> Simboliza con todo tipo de objetos, Hace secuencias sencillas de varias acciones desordenadas, Planifica su juego, Pone voz a los muñecos, Empieza a compartir el juego con otro niño/a, Juega a situaciones conocidas.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false" aria-controls="content-referencias-evol"><span class="sense-icon">📈</span>Referencias Evolutivas y Criterios de Evaluación (LOMLOE)</button>
+              <div class="accordion-content" id="content-referencias-evol" aria-hidden="true">
+                <p>Las <strong>referencias evolutivas</strong> son orientaciones valiosas (pistas de escalas de desarrollo) pero no deben aplicarse con rigidez, especialmente en evaluación educativa vs. psicológica. Interesa conocer la secuencia de aprendizajes para situar al niño.</p>
+                <p><em>Ejemplo secuencia desplazamiento (Pérez-Santamarina, 1998):</em> 8m Coordinación contralateral, 9-10m Gatear, 9m Ponerse de pie con ayuda, 11-12m Primeros pasos, 12-15m Caminar solo, 17m Correr, 18m Subir escaleras, 21m Bajar escaleras cogido, 24m Saltar.</p>
+                <p>Los <strong>criterios de evaluación</strong> orientan la acción educativa. Actualmente, están regulados por el <strong>REAL DECRETO 95/2022, de 1 de febrero</strong>, (que establece la ordenación y las enseñanzas mínimas de la Educación Infantil bajo la LOMLOE) y, en la Comunidad Autónoma de Aragón, por la <strong>ORDEN ECD/1160/2022, de 26 de julio</strong>, que aprueba el currículo de Educación Infantil.</p>
+                <p><em>Ejemplos de criterios según la ORDEN ECD/1160/2022 de Aragón (Estos son ejemplos generales, se deben consultar los criterios específicos de la Orden para cada competencia y ciclo):</em></p>
+                <ul>
+                    <li><strong>Área 1: Crecimiento en Armonía</strong> (Equivalente a Autoconocimiento y autonomía personal): "Identificar y expresar las propias características, necesidades y emociones básicas, mostrando confianza en las propias posibilidades y una actitud de respeto hacia las de los demás." (Adaptar con criterio exacto de la Orden).</li>
+                    <li><strong>Área 2: Descubrimiento y Exploración del Entorno:</strong> "Establecer relaciones con los elementos del entorno natural, social y cultural, mostrando interés por su conocimiento y participando en actividades que fomenten su cuidado y conservación." (Adaptar con criterio exacto de la Orden).</li>
+                    <li><strong>Área 3: Comunicación y Representación de la Realidad:</strong> "Utilizar diferentes lenguajes (verbal, plástico, musical, corporal) para expresar ideas, sentimientos y vivencias, y para comprender los mensajes de los demás." (Adaptar con criterio exacto de la Orden).</li>
+                </ul>
+                <p><a href="https://www.educaragon.org/-/lomloeinfantil" class="external-link" target="_blank" rel="noopener noreferrer">Consultar Currículo LOMLOE Infantil Aragón (ORDEN ECD/1160/2022)</a></p>
+              </div>
+            </div>
+        </div>
+        <button class="action-button modal-trigger" data-modal-target="modal-elaborar-indicadores">Cómo Elaborar Buenos Indicadores</button>
+    </section>
+
+    <!-- SECCIÓN EVALUACIÓN PRÁCTICA DOCENTE -->
+    <section id="evaluacion-practica" class="slide-up content-padding">
+        <h2>La Evaluación de la Práctica Docente (Según OCR pp. 14-16)</h2>
+        <p class="section-intro">La propia práctica docente también será objeto de evaluación para mejorar progresivamente las experiencias educativas. Es una estrategia para el perfeccionamiento y la formación permanente, idealmente realizada en equipo.</p>
+        <div class="accordion-container">
+            <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false" aria-controls="content-fases-practica"><span class="sense-icon">🔄</span>Fases del Proceso Reflexivo o de Evaluación</button>
+                <div class="accordion-content" id="content-fases-practica" aria-hidden="true">
+                    <p>Siguiendo "Bases psicopedagógicas para la formación inicial del profesorado..." (Varios autores, 2000):</p>
+                    <ol>
+                        <li><strong>Definir el problema, conflicto o situación inicial a mejorar:</strong> Procedente de la práctica cotidiana, necesidad sentida, resoluble a corto plazo.</li>
+                        <li><strong>Reflexión sobre las causas, contexto y pronóstico de la situación de partida.</strong></li>
+                        <li><strong>Elaboración de una estrategia de acción y aplicación,</strong> tras análisis y convencimiento.</li>
+                        <li><strong>Valoración de los cambios producidos</strong> y su impacto en el aula y centro.</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false" aria-controls="content-instr-practica"><span class="sense-icon">🛠️</span>Técnicas o Instrumentos para la Reflexión (Varios autores, 2000)</button>
+                <div class="accordion-content" id="content-instr-practica" aria-hidden="true">
+                    <p>Lo ideal es construir instrumentos según necesidades concretas. De forma genérica:</p>
+                    <ul>
+                        <li><strong>Diarios:</strong> Recopilar narrativamente acontecimientos. Elaboración personal, se pueden compartir reflexiones.</li>
+                        <li><strong>Análisis de documentos diversos:</strong> Fichas de alumnos, boletines, agendas.</li>
+                        <li><strong>Fotografías y grabaciones de audio y vídeo:</strong> Registro de situaciones reales de enseñanza-aprendizaje.</li>
+                        <li><strong>Participación de un observador externo:</strong> Útil y enriquecedor, especialmente si es un compañero más experto.</li>
+                        <li><strong>Listas de control, escalas de estimación y encuestas:</strong> Autoaplicadas o por observador externo.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <button class="action-button modal-trigger" data-modal-target="modal-fomentar-reflexion-equipo">Fomentar la Reflexión en Equipo</button>
+    </section>
+
+    <!-- SECCIÓN INFORMES -->
+    <section id="informes-evaluacion" class="fade-in content-padding">
+        <h2>Elaboración de Informes (Según OCR pp. 16-18)</h2>
+        <p class="section-intro">La finalidad de la evaluación es obtener información, que a veces se comparte con familias y otros profesionales. Los informes son documentos técnicos para ello.</p>
+        <div class="accordion-container">
+            <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false" aria-controls="content-carac-informes"><span class="sense-icon">✍️</span>Características de un Informe (Anaya, 2002)</button>
+                <div class="accordion-content" id="content-carac-informes" aria-hidden="true">
+                    <ul>
+                        <li><strong>Rigurosidad:</strong> Contenido manejado con rigor científico para comprensión y contraste.
+                            <ul>
+                                <li><em>Sistematicidad:</em> Información ordenada, agrupada por temas en secuencia lógica.</li>
+                                <li><em>Objetividad:</em> Reflejar resultados obtenidos, separando opiniones e inferencias.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Comunicabilidad:</strong> Documento accesible a personas competentes (con consentimiento o según normativa) para toma de decisiones.
+                            <ul>
+                                <li><em>Precisión terminológica:</em> Uso de términos estándar de la comunidad científica.</li>
+                                <li><em>Corrección lingüística:</em> Redacción semántica y gramaticalmente correcta, abreviaturas entendibles, puntuación adecuada.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Brevedad:</strong> Directo y conciso. No para exhibir conocimientos, ni exponer teorías, ni discutir posiciones personales.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false" aria-controls="content-tipos-informes"><span class="sense-icon">📄</span>Principales Informes Oficiales en Educación Infantil</button>
+                <div class="accordion-content" id="content-tipos-informes" aria-hidden="true">
+                    <p>En el ámbito de la Educación Infantil existen informes y documentos oficiales:</p>
+                    <ul>
+                        <li><strong>Expediente personal del alumnado:</strong> Se abre al inicio de cada ciclo. Formato carpeta-dossier. Incluye:
+                            <ol type="a">
+                                <li>La ficha personal del alumno/a.</li>
+                                <li>Informe anual de evaluación individualizado.</li>
+                                <li>Informe individualizado de final de ciclo.</li>
+                                <li>Resumen de la escolaridad.</li>
+                            </ol>
+                        </li>
+                        <li><strong>Ficha personal:</strong> Datos de filiación, familiares, y si los hubiera, médicos, psicológicos, pedagógicos. Se pueden archivar copias de documentos de interés.</li>
+                        <li><strong>Informe anual de evaluación individualizado:</strong> Elaborado por el tutor/a al finalizar cada curso a partir de la evaluación continua.</li>
+                        <li><strong>Informe individualizado de final de ciclo:</strong> Al finalizar cada ciclo, recoge datos relevantes de informes de cada curso sobre logros, adquisición de aprendizajes, aspectos que condicionan progreso y medidas de refuerzo/adaptación. Se traslada al tutor siguiente para continuidad.</li>
+                        <li><strong>Resumen de escolaridad:</strong> Refleja cursos escolares realizados, centro, firma de dirección y observaciones al finalizar cada ciclo.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <button class="action-button modal-trigger" data-modal-target="modal-redactar-informes-familias">Redactar Informes para Familias</button>
+    </section>
+
+    <!-- SECCIÓN CONCLUSIÓN -->
+    <section id="conclusion-evaluacion" class="slide-up content-padding">
+      <h2>Conclusión: Evaluar para Acompañar y Potenciar (Según OCR p.7 del segundo set)</h2>
+      <div class="section-content">
+        <p>La evaluación en educación infantil es un proceso continuo que nos permite conocer el desarrollo de los niños y adaptar nuestra intervención educativa. No se trata de calificar, sino de acompañar y potenciar su desarrollo utilizando diferentes técnicas e instrumentos.</p>
+        <p>¿Has comprendido bien estas ideas? Si tienes alguna duda específica sobre algún aspecto, podemos profundizar en él. Recuerda que lo importante es entender el concepto de evaluación como una herramienta para mejorar la educación de los niños, no como un mecanismo de clasificación.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="content-padding">
+    <svg class="footer-svg" viewBox="0 0 200 30" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M0 20 Q 25 0 50 20 T 100 20 T 150 20 T 200 20" class="footer-wave-1" stroke-width="2" fill="none" />
+        <path d="M0 25 Q 25 5 50 25 T 100 25 T 150 25 T 200 25" class="footer-wave-2" stroke-width="2" fill="none" />
+    </svg>
+    <p>© <span id="currentYear"></span> Guía de Evaluación en Educación Infantil (LOMLOE). Contenido Educativo.</p>
+  </footer>
+
+  <!-- MODALES (Con contenido completo) -->
+  <div id="modal-finalidad-evaluacion" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-finalidad-title-ext" aria-describedby="modal-finalidad-desc-ext">
+    <div class="modal-content">
+      <button class="close-button" aria-label="Cerrar modal">×</button>
+      <h3 id="modal-finalidad-title-ext">Profundizando en la Finalidad de la Evaluación en EI</h3>
+      <div id="modal-finalidad-desc-ext">
+        <p>La evaluación en Educación Infantil se aleja de la idea de "examen" o "calificación". Su esencia es ser una herramienta <strong>pedagógica y formativa</strong>.</p>
+        <h4>Objetivos Primordiales:</h4>
+        <ul>
+            <li><strong>Ajustar la Acción Educativa:</strong> Este es el fin principal. La información recogida permite al educador/a adaptar las metodologías, actividades, materiales y ritmos a las necesidades individuales y grupales. Se busca ofrecer una respuesta educativa pertinente.</li>
+            <li><strong>Conocer el Desarrollo Individual:</strong> Permite seguir de cerca cómo cada niño y niña va progresando en las diferentes áreas (cognitiva, motriz, lingüística, socioemocional), identificando sus fortalezas y aquellos aspectos que requieren más apoyo.</li>
+            <li><strong>Compartir Información Valiosa:</strong>
+                <ul>
+                    <li><strong>Con las Familias:</strong> Para que comprendan mejor el proceso de desarrollo de sus hijos, participen activamente y se establezca una línea de actuación coherente entre casa y escuela.</li>
+                    <li><strong>Con Otros Profesionales:</strong> Tanto del propio centro (equipo educativo, especialistas) como de etapas posteriores (Primaria), para asegurar la continuidad y coherencia de la intervención.</li>
+                </ul>
+            </li>
+            <li><strong>Mejorar la Práctica Docente:</strong> La evaluación de los aprendizajes de los niños también es un espejo de la propia práctica. Permite al educador/a reflexionar sobre qué funciona, qué se puede mejorar y cómo enriquecer las propuestas educativas.</li>
+        </ul>
+        <h4>Lo que NO es la Evaluación en EI:</h4>
+        <p>Es crucial reiterar que en esta etapa (0-6 años), la evaluación <strong>nunca debe utilizarse para:</strong> procesos de selección o admisión, clasificar o etiquetar a los niños, establecer comparaciones competitivas entre ellos, o poner "notas" numéricas o alfabéticas con valor sumativo tradicional.</p>
+        <p>La evaluación en Educación Infantil es, por tanto, un instrumento al servicio del desarrollo y aprendizaje de cada niño y niña, y de la mejora continua de la calidad educativa.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-actitud-evaluador" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-actitud-title-ext" aria-describedby="modal-actitud-desc-ext">
+    <div class="modal-content">
+        <button class="close-button" aria-label="Cerrar modal">×</button>
+        <h3 id="modal-actitud-title-ext">La Actitud del Educador/a frente a la Evaluación</h3>
+        <div id="modal-actitud-desc-ext">
+            <p>Más allá de las técnicas e instrumentos, la actitud del profesional que evalúa es fundamental. Una evaluación efectiva en Educación Infantil requiere:</p>
+            <ul>
+                <li><strong>Observación Atenta y Continuada:</strong> Estar presente, escuchar y mirar con intención para captar los matices del desarrollo y aprendizaje de cada niño.</li>
+                <li><strong>Flexibilidad y Disposición al Cambio:</strong> Estar dispuesto/a a modificar la planificación y la intervención educativa en función de la información recogida. La evaluación debe llevar a la acción.</li>
+                <li><strong>Enfoque Positivo y Constructivo:</strong> Centrarse en los logros y avances, y ver las dificultades como oportunidades para ofrecer apoyos específicos, no como fracasos.</li>
+                <li><strong>Respeto a la Individualidad:</strong> Reconocer y valorar los diferentes ritmos, estilos de aprendizaje e intereses de cada niño y niña, evitando comparaciones.</li>
+                <li><strong>Empatía y Conexión:</strong> Establecer un vínculo afectivo con los niños que facilite una observación natural y una comprensión profunda de sus necesidades.</li>
+                <li><strong>Reflexión Crítica:</strong> Cuestionar la propia práctica, analizar la efectividad de las estrategias y buscar constantemente formas de mejorar.</li>
+                <li><strong>Colaboración:</strong> Trabajar de forma coordinada con el resto del equipo educativo y con las familias, compartiendo información y unificando criterios.</li>
+                <li><strong>Ética Profesional:</strong> Utilizar la información obtenida de forma responsable, confidencial y siempre en beneficio del desarrollo integral del niño/a.</li>
+            </ul>
+            <p>Esta actitud transforma la evaluación de una mera tarea burocrática en una herramienta dinámica y poderosa para el crecimiento de los niños y el desarrollo profesional del educador.</p>
+        </div>
+    </div>
+  </div>
+
+  <div id="modal-detalle-momentos" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-momentos-dt-title-ext" aria-describedby="modal-momentos-dt-desc-ext">
+    <div class="modal-content large">
+      <button class="close-button" aria-label="Cerrar modal">×</button>
+      <h3 id="modal-momentos-dt-title-ext">Profundizando en los Momentos de la Evaluación</h3>
+      <div id="modal-momentos-dt-desc-ext">
+        <p>La evaluación no es un evento aislado, sino un proceso integrado en la dinámica educativa. Cada momento tiene un enfoque y una utilidad particular:</p>
+        <h4><span class="sense-icon">🚀</span>Evaluación Inicial: El Punto de Partida</h4>
+        <p><strong>¿Qué es?</strong> Se realiza al inicio de un proceso de enseñanza-aprendizaje (curso, unidad didáctica, proyecto). Su objetivo es conocer las experiencias, conocimientos, habilidades, intereses y expectativas previas del alumnado.</p>
+        <p><strong>¿Para qué sirve?</strong> Adecuar la planificación, establecer un referente, detectar necesidades, conectar con aprendizajes previos. Como dice Cubero (1989), solo se aprende construyendo sobre lo anterior.</p>
+        <p><strong>¿Cómo se hace?</strong> Observación en juego libre, entrevistas, análisis de producciones iniciales, actividades diagnósticas lúdicas.</p>
+
+        <h4><span class="sense-icon">🔄</span>Evaluación Continua (Formativa): El Acompañamiento Constante</h4>
+        <p><strong>¿Qué es?</strong> Se desarrolla a lo largo de todo el proceso. Su finalidad es recoger información sistemática sobre la evolución de los niños en relación con las capacidades y objetivos.</p>
+        <p><strong>¿Para qué sirve?</strong> Regular el proceso, proporcionar retroalimentación, ajustar ayudas pedagógicas, implicar al niño/a en su aprendizaje.</p>
+        <p><strong>¿Cómo se hace?</strong> Observación sistemática y participante, análisis de producciones diarias, diálogo, puestas en común.</p>
+
+        <h4><span class="sense-icon">🏁</span>Evaluación Final (Sumativa): La Valoración del Proceso</h4>
+        <p><strong>¿Qué es?</strong> Se realiza al concluir un periodo (trimestre, curso, ciclo). Valora el grado de consecución de objetivos y desarrollo de capacidades.</p>
+        <p><strong>¿Para qué sirve?</strong> Verificar logro de objetivos, tomar decisiones sobre promoción/adaptaciones, informar a familias, evaluar la propia intervención, ser punto de partida para la siguiente evaluación inicial.</p>
+        <p><strong>¿Cómo se hace?</strong> Síntesis de información continua, análisis de trabajos/proyectos finales, observación específica.</p>
+
+        <h4><span class="sense-icon">📋</span>Evaluación de la Planificación y Materiales: Mirando Hacia Adentro</h4>
+        <p><strong>¿Qué es?</strong> Reflexión crítica sobre la propuesta educativa: programación, proyectos, unidades, espacios, tiempos, materiales curriculares.</p>
+        <p><strong>¿Para qué sirve?</strong> Identificar adecuación y efectividad, mejorar selección/uso de recursos, asegurar coherencia, promover innovación.</p>
+        <p><strong>¿Cómo se hace?</strong> Autoevaluación docente, coevaluación en equipo, análisis de resultados, recogida de opiniones.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-registros-narrativos" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-narrativos-title-ext" aria-describedby="modal-narrativos-desc-ext">
+    <div class="modal-content large">
+      <button class="close-button" aria-label="Cerrar modal">×</button>
+      <h3 id="modal-narrativos-title-ext">Técnica de Observación: Registros Narrativos</h3>
+      <div id="modal-narrativos-desc-ext">
+        <p>Los registros narrativos son descripciones detalladas, en lenguaje ordinario (escrito u oral grabado), de los acontecimientos observados. No siguen una estructura rígida previa, lo que los hace flexibles y ricos en matices.</p>
+        <h4>Características Generales:</h4>
+        <ul>
+            <li><strong>Estilo Textual:</strong> Se redactan como una narración.</li>
+            <li><strong>No Estructurados:</strong> Sin categorías predefinidas para organizar la información durante la recogida.</li>
+            <li><strong>Útiles en Fases Iniciales:</strong> Para exploraciones preliminares o visión general.</li>
+            <li><strong>Adecuados para Conductas de Baja Frecuencia:</strong> Para registrar eventos significativos no habituales.</li>
+        </ul>
+        <h4>Tipos de Registros Narrativos:</h4>
+        <h5>1. Registros Anecdóticos:</h5>
+        <p><strong>¿Qué son?</strong> Descripciones de sucesos específicos, inesperados o poco comunes, considerados reveladores. Son "fotografías" de momentos significativos.</p>
+        <p><strong>¿Cuándo usarlos?</strong> Para capturar manifestaciones espontáneas de aprendizaje, dificultades, interacciones, creatividad.</p>
+        <p><strong>¿Qué incluir?</strong> Identificación (niño/a, fecha, hora, observador/a), Contexto (dónde, actividad, presentes), Descripción Objetiva del Incidente (hechos, citas textuales), Interpretación/Comentario del Observador (separado, análisis del significado).</p>
+        <p><em>Ejemplo:</em> "Marta (4 años), 15/03/24, 10:30, Rincón de arte. Observadora: Laura P. <em>Contexto:</em> Niños dibujando. <em>Incidente:</em> Marta tomó color azul, dijo 'Voy a pintar el cielo triste porque hoy llueve'. Pintó azul oscuro y gotas. <em>Comentario:</em> Primera vez que Marta verbaliza conexión color-emoción-fenómeno. Muestra desarrollo simbólico y expresión emocional."</p>
+        <h5>2. Registros Continuos (o Muestras de Comportamiento):</h5>
+        <p><strong>¿Qué son?</strong> Descripciones detalladas del comportamiento (y circunstancias, antecedentes, consecuentes) durante un intervalo de tiempo preestablecido.</p>
+        <p><strong>¿Cuándo usarlos?</strong> Para exploración inicial, entender secuencias, obtener imagen completa en una situación.</p>
+        <p><strong>Ventajas:</strong> Datos ricos y contextualizados. Ayudan a generar hipótesis. <strong>Limitaciones:</strong> Laboriosos, difícil ser exhaustivo.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-listas-control" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-listas-title-ext" aria-describedby="modal-listas-desc-ext">
+    <div class="modal-content">
+      <button class="close-button" aria-label="Cerrar modal">×</button>
+      <h3 id="modal-listas-title-ext">Técnica de Observación: Listas de Control</h3>
+      <div id="modal-listas-desc-ext">
+        <p>Las listas de control (checklists) son instrumentos estructurados con un listado de conductas, habilidades o aspectos específicos. El observador indica si cada elemento <strong>ha ocurrido o no</strong> (Sí/No, Presente/Ausente).</p>
+        <h4>Características Principales:</h4>
+        <ul>
+            <li><strong>Estructuradas:</strong> Conductas predefinidas.</li>
+            <li><strong>Dicotómicas:</strong> Respuesta binaria.</li>
+            <li><strong>Fáciles y rápidas:</strong> Recogen información eficientemente.</li>
+            <li><strong>Objetivas (teóricamente):</strong> Si los ítems son claros.</li>
+            <li><strong>Útiles para:</strong> Verificar habilidades concretas, pasos de procedimientos, presencia de comportamientos, evaluar productos.</li>
+        </ul>
+        <h4>Elaboración:</h4>
+        <p>Definir objetivo, listar conductas observables (específicas, claras, unívocas), ordenar ítems, diseñar formato, probar y revisar.</p>
+        <p><em>Ejemplo (Higiene 3 años):</em> Se lava manos (S/N), Usa jabón (S/N).</p>
+        <p><strong>Ventajas:</strong> Sencillez, rapidez, visión general, comparación de progresos. <strong>Limitaciones:</strong> No informan calidad/frecuencia/intensidad, pueden ser simplistas, requieren ítems bien definidos.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-escalas-estimacion" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-escalas-title-ext" aria-describedby="modal-escalas-desc-ext">
+    <div class="modal-content large">
+      <button class="close-button" aria-label="Cerrar modal">×</button>
+      <h3 id="modal-escalas-title-ext">Técnica de Observación: Escalas de Estimación</h3>
+      <div id="modal-escalas-desc-ext">
+        <p>Presentan un listado de conductas, pero el observador <strong>cuantifica el grado, frecuencia o intensidad</strong> con que se manifiestan.</p>
+        <h4>Tipos Comunes de Escalas:</h4>
+        <ul>
+            <li><strong>Numéricas:</strong> 0=Nunca, 1=A veces, 2=Frecuentemente, 3=Siempre.</li>
+            <li><strong>Gráficas:</strong> Marcar en una línea continua (Bajo |---| Alto).</li>
+            <li><strong>Descriptivas (más útiles):</strong> Cada punto tiene una descripción verbal. <em>Ej: Participación: 1.No participa ... 4.Participa activamente.</em></li>
+        </ul>
+        <h4>Características Principales:</h4>
+        <p>Evaluación más matizada, informan sobre calidad/grado. Requieren buen entrenamiento y descriptores claros y mutuamente excluyentes.</p>
+        <h4>Elaboración:</h4>
+        <p>Definir rasgo, determinar nº de niveles (3-5), definir claramente cada nivel, diseñar formato, probar y revisar.</p>
+        <p><strong>Ventajas:</strong> Más información que listas, fáciles de construir/aplicar. <strong>Limitaciones:</strong> Subjetividad (sesgos del observador), interpretación de puntos intermedios, no tan detalladas como narrativos.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-aspectos-observacion" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-aspectosobs-title-ext" aria-describedby="modal-aspectosobs-desc-ext">
+    <div class="modal-content large">
+      <button class="close-button" aria-label="Cerrar modal">×</button>
+      <h3 id="modal-aspectosobs-title-ext">Aspectos Clave de la Observación Educativa</h3>
+      <div id="modal-aspectosobs-desc-ext">
+        <p>La observación efectiva considera (contenido basado en OCR pp. 2):</p>
+        <h4>1. El Contenido: ¿Qué Observamos?</h4>
+        <p>Respuestas motoras (correr, coger lápiz), cognitivas (resolver problemas, lenguaje, atención), socioemocionales (interacciones, expresión emociones), productos de la conducta (dibujos, construcciones), procesos (cómo llega al resultado).</p>
+        <h4>2. El Agente Observador: ¿Quién y Cómo?</h4>
+        <p><strong>Observación Participante:</strong> El educador forma parte activa. Comprensión contextualizada, pero puede dificultar registro o introducir sesgos. Más común en aula.</p>
+        <p><strong>Observación No Participante:</strong> Observador externo. Registro más objetivo, pero puede ser artificial.</p>
+        <h4>3. La Situación: ¿Dónde y Cuándo?</h4>
+        <p><strong>Situaciones Naturales:</strong> Contexto habitual (juego libre, rutinas). Preferente en EI, refleja comportamiento espontáneo.</p>
+        <p><strong>Situaciones Artificiales:</strong> Condiciones específicas para observar conducta particular. Menos frecuentes en EI.</p>
+        <h4>4. El Momento de la Observación/Registro:</h4>
+        <p><strong>Observación Actual:</strong> Registro inmediato. Ideal para detalles, pero difícil si se está implicado.</p>
+        <p><strong>Observación con Posterioridad (Diferida):</strong> Registro después. Requiere buena memoria. Permite mayor participación.</p>
+        <p>La combinación de estas variables ofrece múltiples enfoques. Seleccionar el más adecuado según objetivos.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-conducir-entrevista" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-entrevistaefectiva-title-ext" aria-describedby="modal-entrevistaefectiva-desc-ext">
+    <div class="modal-content large">
+      <button class="close-button" aria-label="Cerrar modal">×</button>
+      <h3 id="modal-entrevistaefectiva-title-ext">Claves para una Entrevista Educativa Efectiva</h3>
+      <div id="modal-entrevistaefectiva-desc-ext">
+        <p>La entrevista, especialmente con familias, es fundamental. Claves:</p>
+        <h4>Antes: Preparación</h4>
+        <p>Definir Objetivo, Revisar Información Previa, Preparar Guion (semiestructuradas), Elegir Momento y Lugar Adecuados, Citar con Antelación.</p>
+        <h4>Durante: Desarrollo</h4>
+        <p>Crear Clima de Confianza, Explicar Propósito, Escucha Activa (verbal y no verbal), Formular Preguntas Claras y Abiertas, Ser Flexible, Manejar el Tiempo, Tomar Notas Discretamente, Resumir y Concluir.</p>
+        <h4>Después: Seguimiento</h4>
+        <p>Completar Notas, Analizar Información, Registrar, Cumplir Acuerdos, Dar Devolución (si procede).</p>
+        <p>Una entrevista bien conducida fortalece la relación y confianza escuela-familia.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-uso-instrumentos" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-instrumentosest-title-ext" aria-describedby="modal-instrumentosest-desc-ext">
+    <div class="modal-content large">
+      <button class="close-button" aria-label="Cerrar modal">×</button>
+      <h3 id="modal-instrumentosest-title-ext">Consideraciones sobre Instrumentos Estandarizados en EI</h3>
+      <div id="modal-instrumentosest-desc-ext">
+        <p>Los instrumentos estandarizados (tests, escalas con normas) aportan información valiosa pero requieren consideraciones.</p>
+        <h4>¿Qué Aportan?</h4>
+        <p>Objetividad y Comparabilidad, Detección de Dificultades, Planificación de Intervenciones, Investigación.</p>
+        <h4>¿Quién los Aplica?</h4>
+        <p>Generalmente especialistas (psicólogos, psicopedagogos, logopedas). El educador infantil juega un rol crucial en la observación diaria y detección temprana.</p>
+        <h4>Consideraciones para el Educador/a Infantil:</h4>
+        <ul>
+            <li>No son la única fuente de información; complementar con observación, info familiar, análisis de producciones.</li>
+            <li>Contexto de aplicación puede influir en resultados (estado emocional, fatiga).</li>
+            <li>Interpretación cautelosa: evitar etiquetar; usar para comprender y ayudar.</li>
+            <li>Enfoque en el proceso, no solo la puntuación.</li>
+            <li>Comunicación con especialistas para entender implicaciones.</li>
+            <li>Uso para orientar, no para clasificar.</li>
+        </ul>
+        <p>Son una herramienta más, su valor reside en su uso adecuado, ético y contextualizado.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-elaborar-indicadores" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-indicadoreselab-title-ext" aria-describedby="modal-indicadoreselab-desc-ext">
+    <div class="modal-content large">
+      <button class="close-button" aria-label="Cerrar modal">×</button>
+      <h3 id="modal-indicadoreselab-title-ext">Cómo Elaborar Buenos Indicadores de Evaluación en EI</h3>
+      <div id="modal-indicadoreselab-desc-ext">
+        <p>Los indicadores son enunciados que describen conductas observables que permiten inferir progreso.</p>
+        <h4>Características de un Buen Indicador:</h4>
+        <p>Observable, Claro y Preciso, Relevante, Alcanzable, Centrado en el Niño/a, Flexible (en conjunto).</p>
+        <h4>Pasos para Elaborar Indicadores:</h4>
+        <p>1. Partir de Objetivos/Capacidades. 2. Desglosar en Conductas Observables. 3. Redactar (Verbo + Contenido + Contexto). 4. Considerar Grado de Concreción (evitar ser demasiado general o específico). 5. Revisar y Ajustar.</p>
+        <p><em>Ejemplos:</em> "Nombra colores primarios al mostrárselos." "Juega cerca de otros niños." "Agrupa objetos por color."</p>
+        <p>Recordar: los indicadores son guía; la observación global es fundamental.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-fomentar-reflexion-equipo" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-reflexionequipo-title-ext" aria-describedby="modal-reflexionequipo-desc-ext">
+    <div class="modal-content large">
+      <button class="close-button" aria-label="Cerrar modal">×</button>
+      <h3 id="modal-reflexionequipo-title-ext">Fomentar la Reflexión sobre la Práctica en Equipo</h3>
+      <div id="modal-reflexionequipo-desc-ext">
+        <p>La evaluación de la práctica docente es más rica y efectiva en equipo.</p>
+        <h4>Estrategias para Fomentarlo:</h4>
+        <ul>
+            <li><strong>Crear un Clima de Confianza y Respeto:</strong> Seguridad para expresar ideas y dificultades.</li>
+            <li><strong>Establecer Momentos y Espacios:</strong> Reuniones pedagógicas, grupos de trabajo, co-observación.</li>
+            <li><strong>Utilizar Herramientas Compartidas:</strong> Análisis de documentos, puesta en común de diarios, visualización de grabaciones, estudio de casos, diseño colaborativo.</li>
+            <li><strong>Focalizar la Reflexión:</strong> Partir de preguntas clave, basarse en evidencias.</li>
+            <li><strong>Liderazgo Pedagógico de Apoyo:</strong> Facilitar espacios y recursos.</li>
+            <li><strong>Celebrar Avances y Aprender de Errores:</strong> Ver dificultades como oportunidades.</li>
+        </ul>
+        <p>Es una cultura institucional que mejora el bienestar y aprendizaje infantil.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-redactar-informes-familias" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-informesfamilias-title-ext" aria-describedby="modal-informesfamilias-desc-ext">
+    <div class="modal-content large">
+      <button class="close-button" aria-label="Cerrar modal">×</button>
+      <h3 id="modal-informesfamilias-title-ext">Claves para Redactar Informes de Evaluación para las Familias</h3>
+      <div id="modal-informesfamilias-desc-ext">
+        <p>Los informes a familias son un canal de comunicación fundamental.</p>
+        <h4>Pautas (Rigurosidad y Comunicabilidad):</h4>
+        <p><strong>1. Claridad y Lenguaje Accesible:</strong> Evitar jerga, ser conciso, corrección lingüística, estructura lógica.<br>
+           <strong>2. Enfoque Positivo y Constructivo:</strong> Destacar logros, dificultades como áreas de mejora, evitar comparaciones.<br>
+           <strong>3. Basado en Evidencias:</strong> Apoyar con ejemplos, reflejar observaciones sistemáticas, ser honesto.<br>
+           <strong>4. Visión Integral:</strong> Abarcar diferentes áreas del desarrollo, incluir aspectos cualitativos.<br>
+           <strong>5. Orientaciones para la Familia:</strong> Sugerir apoyo en casa, abrir canales de comunicación.</p>
+        <h4>Estructura Posible:</h4>
+        <p>Datos identificación, Introducción, Aspectos generales, Progreso por áreas (con ejemplos), Aspectos destacados, Áreas de mejora, Sugerencias familia, Conclusión. El informe escrito se complementa con entrevista personal.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Fin de la sección de modales -->
+
+  <audio id="sonidoExito" src="assets/sonido_exito_placeholder.mp3" preload="auto"></audio>
+  <audio id="sonidoClick" src="assets/sonido_click_placeholder.mp3" preload="auto"></audio>
+  <audio id="sonidoHover" src="assets/sonido_hover_placeholder.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
